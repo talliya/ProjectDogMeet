@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+			<title>List of dogs</title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <script src="http://dogmeet.prv.pl/script/pgb.js"></script>
+    <script src="http://dogmeet.prv.pl/script/compile.js"></script>
+    <script src="http://dogmeet.prv.pl/script/cordova.js"></script>
+    <link rel="stylesheet" href="http://dogmeet.prv.pl/script/jmobile/jquery.mobile-1.4.5.min.css" />
+    <link rel="stylesheet" href="http://dogmeet.prv.pl/script/jmobile/jquery.mobile.theme-1.4.5.css" />
+    <link rel="stylesheet" href="http://dogmeet.prv.pl/script/my_css_01.css" />
+    <script src="http://dogmeet.prv.pl/script/jquery-2.1.4.min.js"></script>
+    <script src="http://dogmeet.prv.pl/script/jquery.mobile-1.4.5.min.js"></script>
+    <script type="text/javascript" src="http://dogmeet.prv.pl/script/jquery-1.8.2.min.js"></script>
+    <script type="text/javascript" src="http://dogmeet.prv.pl/script/my_script.js"></script>
+	<!--<link rel="stylesheet" type="text/css" href="style.css">-->
+</head>
+<body>
+
+<table data-role="table" id="movie-table-custom" data-mode="reflow" class="movie-list ui-responsive">
+<?php
+$servername = "userdb1";
+$username = "1136789_GqS";
+$password = "JUqptCLJi0R8CA";
+$dbname = "1136789_GqS";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+} 
+
+$sql = "SELECT dogPhotoUrl,dogName,dogBreed,dogGender,dogSize,dogAge,rodowod,dogDescription,dogSearch,dogPuppies,dogOwnerName,dogOwnerNumber FROM DogRecord";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    echo "<table><tr><th>Dog list</th><th></th></tr>";
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+        echo "<tr><td></td><td><img src=".$row["dogPhotoUrl"]."></td></tr>
+        <tr><td>Name of the dog: </td><td>".$row["dogName"]."</td></tr>
+        <tr><td> Breed: </td><td>".$row["dogBreed"]."</td></tr>
+        <tr><td> Gender: </td><td>".$row["dogGender"]."</td></tr>
+        <tr><td> Size: </td><td>".$row["dogSize"]."</td></tr>
+        <tr><td> Age: </td><td>".$row["dogAge"]."</td></tr>
+        <tr><td> Pedigree: </td><td>".$row["rodowod"]."</td></tr>
+        <tr><td> Description: </td><td>".$row["dogDescription"]."</td></tr>
+        <tr><td> Looking for (breed): </td><td>".$row["dogSearch"]."</td></tr>
+        <tr><td> Progeny allotment: </td><td>".$row["dogPuppies"]."</td></tr>
+        <tr><td> Owner's name: </td><td>".$row["dogOwnerName"]."</td></tr>
+        <tr><td> Contact number: </td><td>".$row["dogOwnerNumber"]."</td></tr>
+        <br><br>";
+    }
+    echo "</table>";
+} else {
+    echo "0 results";
+}
+$conn->close();
+?>
+
+</table>
+
+<ul></ul>
+<script type="text/javascript" src="http://dogmeet.prv.pl/script/jquery-1.8.2.min.js"></script>
+<a href="http://dogmeet.prv.pl/dogsite/index.html" class="ui-btn ui-btn-inline ui-icon-back ui-btn-icon-left">Back</a>
+
+</body>
+</html>
