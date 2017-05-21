@@ -6,6 +6,10 @@
  
 <icon src="icon.png" platform="android" width="180" height="180" />
 <splash src="splash.png" platform="android" />
+<feature name="InAppBrowser">
+    <param name="android-package" value="org.apache.cordova.InAppBrowser" />
+    <param name="ios-package" value="CDVInAppBrowser" />
+</feature>
 
 <access origin="*" />         
 
