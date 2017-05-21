@@ -4,8 +4,8 @@
         id        = "com.phonegap.helloworld"
         version   = "1.0.0">
  
-<icon src="res/icon/icon.png" platform="android" width="180" height="180" />
-<splash src="res/splash/splash.png" platform="android" />
+<icon src="icon.png" platform="android" width="180" height="180" />
+<splash src="splash.png" platform="android" />
 
 <access origin="*" />         
 
