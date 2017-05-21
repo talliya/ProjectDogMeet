@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<widget xmlns     = "http://www.w3.org/ns/widgets"
+        xmlns:gap = "http://phonegap.com/ns/1.0"
+        id        = "com.phonegap.helloworld"
+        version   = "1.0.0">
+ 
+<icon src="res/icon/icon.png" platform="android" width="180" height="180" />
+<splash src="res/splash/splash.png" platform="android" />
+
+<access origin="*" />         
+
+
+
+ <name>DogTest New Test</name>
+
+  <description>
+      Dog test app
+  </description>
+
+  <author >
+     Nata Test
+  </author>
+</widget>
