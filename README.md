@@ -16,8 +16,8 @@ https://github.com/talliya/DogMeetProject/wiki
 # Autorzy
 Jakub Piekarczyk<br>
 Numer albumu 181356<br>
-KrZUIs2011, Infornaqtyka stosowana<br>
+KrZUIs2011, Informatyka stosowana<br>
 <br>
 Nataliia Kondratieva<br>
 Numer albumu 172920<br>
-KrZUIs2011, Infornaqtyka stosowana<br>
+KrZUIs2011, Informatyka stosowana<br>
